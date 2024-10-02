@@ -126,7 +126,10 @@ if(app_mode == "Image Emotion Prediction"):
         size = len(emotion_video_recommendations[result])
         index = int(np.random.rand()*size)
         video_type = emotion_video_recommendations[result][index]
-        webbrowser.open(f"https://www.youtube.com/results?search_query={video_type}")
+        # webbrowser.open(f"https://www.youtube.com/results?search_query={video_type}")
+        # st.markdown(f"[Click here for YouTube recommendations](https://www.youtube.com/results?search_query={video_type})")
+        st.components.v1.html(f"<iframe width='560' height='315' src='https://www.youtube.com/results?search_query={video_type}' frameborder='0'></iframe>")
+
 
 
         
